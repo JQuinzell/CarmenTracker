@@ -35,8 +35,8 @@ int main()
     Point3D point2(1,1,1);
     Point3D point3 = point + point2;
     point3 += point;
-    cout << (point + point2) << endl;
-    cout << (point3) << endl;
-    
+    cout << (point - point2) << endl;
+    cout << (point -= point2) << endl;
+    cout << point3 << endl;    
     
 }

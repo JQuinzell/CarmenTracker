@@ -29,7 +29,20 @@ public:
     //Post: Return new point with added coords
     friend Point3D operator +(const Point3D& lhs, const Point3D& rhs);
     
+    //Desc: Add point in place
+    //Pre: None
+    //Post: Adds rhs x,y,z to the current point
     Point3D& operator +=(const Point3D& rhs);
+    
+    //Desc: Subtract x,y,z of two points
+    //Pre: None
+    //Post: Return new point with subtracted coords
+    friend Point3D operator -(const Point3D& lhs, const Point3D& rhs);
+    
+    //Desc: Subtract points in place
+    //Pre: None
+    //Post: Subtracts rhs x,y,z from the current point
+    Point3D& operator -=(const Point3D& rhs);
 };
 
 #endif

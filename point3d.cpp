@@ -24,3 +24,18 @@ Point3D& Point3D::operator +=(const Point3D& rhs)
     *this = *this + rhs;
     return *this;
 }
+
+Point3D operator -(const Point3D& lhs, const Point3D& rhs)
+{
+    Point3D result(lhs);
+    result.x -= rhs.x;
+    result.y -= rhs.y;
+    result.z -= rhs.z;
+    return result;
+}
+
+Point3D& Point3D::operator -=(const Point3D& rhs)
+{
+    *this = *this - rhs;
+    return *this;
+}
