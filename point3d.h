@@ -45,16 +45,28 @@ public:
     Point3D& operator -=(const Point3D& rhs);
     
     //Desc: Multiply point with a scalar
-    //Pre: scalar must respond to * with double
+    //Pre: scalar must respond to *= with double
     //Post: Return new point with multiplied coords
     template <typename T>
     friend Point3D operator *(const Point3D& lhs, const T& scalar);
     
     //Desc: Multiply point with scalar
-    //Pre: scalar must respond to * with double
-    //Post: Multiplies rhs x,y,z with the current point
+    //Pre: scalar must respond to *= with double
+    //Post: Multiplies rhs x,y,z with the scalar
     template <typename T>
     Point3D& operator *=(const T& scalar);
+
+    //Desc: Divide point by a scalar
+    //Pre: scalar must respond to /= with double
+    //Post: Return new point with divided coords
+    template <typename T>
+    friend Point3D operator /(const Point3D& lhs, const T& scalar);
+    
+    //Desc: Multiply point with scalar
+    //Pre: scalar must respond to /= with double
+    //Post: Divides point's x,y,z by scalar
+    template <typename T>
+    Point3D& operator /=(const T& scalar);
 };
 
 #include "point3d.hpp"

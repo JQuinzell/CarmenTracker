@@ -37,6 +37,6 @@ int main()
     point3 += point;
     cout << (point * 5) << endl;
     cout << (point *= 5) << endl;
-    cout << point3 * 3 << endl;    
+    cout << point3 / 3 << endl;
     
 }
