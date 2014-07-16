@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "point3d.h"
 using namespace std;
 
 int main()
@@ -28,6 +29,13 @@ int main()
     cout << output_name << endl;
     
     //track villains
+    
+    //testing point class
+    Point3D point(1,1,1);
+    Point3D point2(1,1,1);
+    Point3D point3 = point + point2;
+    cout << point << endl;
+    cout << (point3) << endl;
     
     
 }
