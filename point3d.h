@@ -23,6 +23,10 @@ public:
     double get_y() const { return y; }
     double get_z() const { return z; }
     
+    void set_x(double val) { x = val; return; }
+    void set_y(double val) { y = val; return; }
+    void set_z(double val) { z = val; return; }
+    
     //Desc: Use class with <<
     //Pre: None
     //Post: Sends x,y,x to stream and returns the stream
