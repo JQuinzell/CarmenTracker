@@ -22,12 +22,14 @@ public:
     //Desc: Use class with <<
     //Pre: None
     //Post: Sends x,y,x to stream and returns the stream
-    friend ostream& operator <<(ostream& out, Point3D& point);
+    friend ostream& operator <<(ostream& out, const Point3D& point);
     
     //Desc: Add each coord in a point together
     //Pre: None
     //Post: Return new point with added coords
     friend Point3D operator +(const Point3D& lhs, const Point3D& rhs);
+    
+    Point3D& operator +=(const Point3D& rhs);
 };
 
 #endif
