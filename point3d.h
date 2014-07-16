@@ -19,6 +19,10 @@ public:
     //Parameters are passed in the order x,y,z.
     Point3D(cdbl x_val=0, cdbl y_val=0, cdbl z_val=0);
     
+    double get_x() const { return x; }
+    double get_y() const { return y; }
+    double get_z() const { return z; }
+    
     //Desc: Use class with <<
     //Pre: None
     //Post: Sends x,y,x to stream and returns the stream
