@@ -43,6 +43,20 @@ public:
     //Pre: None
     //Post: Subtracts rhs x,y,z from the current point
     Point3D& operator -=(const Point3D& rhs);
+    
+    //Desc: Multiply point with a scalar
+    //Pre: scalar must respond to * with double
+    //Post: Return new point with multiplied coords
+    template <typename T>
+    friend Point3D operator *(const Point3D& lhs, const T& scalar);
+    
+    //Desc: Multiply point with scalar
+    //Pre: scalar must respond to * with double
+    //Post: Multiplies rhs x,y,z with the current point
+    template <typename T>
+    Point3D& operator *=(const T& scalar);
 };
+
+#include "point3d.hpp"
 
 #endif
