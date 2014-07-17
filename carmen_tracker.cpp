@@ -5,6 +5,7 @@
 #include <fstream>
 #include <string>
 #include "point3d.h"
+#include "integrator.h"
 using namespace std;
 
 int main()
@@ -31,12 +32,8 @@ int main()
     //track villains
     
     //testing point class
-    Point3D point(1,1,1);
-    Point3D point2(1,1,1);
-    Point3D point3 = point + point2;
-    point3 += point;
-    cout << (point * 5) << endl;
-    cout << (point *= 5) << endl;
-    cout << point3 / 3 << endl;
-    
+    Point3D point(1,5,1);
+    key = 3.40001;
+    Integrator inte(point, key);
+    cout << inte.x_dot() << endl;
 }
