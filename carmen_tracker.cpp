@@ -8,11 +8,14 @@
 #include "integrator.h"
 using namespace std;
 
+const int MAX_INTEGRATIONS = 10;
+
 int main()
 {
     int iterations, num_villains;
     double key;
     string file_name, output_name;
+    Integrator integrators[MAX_INTEGRATIONS];
     
     cout << "Welcome. Please provide the file name: ";
     cin >> file_name;
@@ -23,17 +26,20 @@ int main()
     fin >> key;
     fin >> num_villains;
     fin >> output_name;
-    
-    cout << iterations << endl;
-    cout << key << endl;
-    cout << num_villains << endl;
-    cout << output_name << endl;
-    
+    fin.close();
+        
     //track villains
+    ofstream fout(output_name.c_str());
     
-    //testing point class
-    Point3D point(1,5,1);
-    key = 3.40001;
-    Integrator inte(point, key);
-    cout << inte.x_dot() << endl;
+    for(int i = 0; i < iterations; i++)
+    {
+        for(int j = 0; j < num_villains; j++)
+        {
+            fout << integrators[j].step() << " ";
+        }
+        fout << "\n";
+    }
+    fout.close();
+    return 0;
+    
 }
