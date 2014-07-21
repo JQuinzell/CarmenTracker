@@ -16,6 +16,8 @@ public:
     float x_dot();
     float y_dot();
     float z_dot();
+    
+    Point3D step();
 };
 
 #endif

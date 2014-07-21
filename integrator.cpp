@@ -18,3 +18,11 @@ float Integrator::z_dot()
 {
     return point.get_z() + timestep * (point.get_x() * point.get_y() - BETA * point.get_z());
 }
+
+Point3D Integrator::step()
+{
+    point.set_x(x_dot());
+    point.set_y(y_dot());
+    point.set_z(z_dot());
+    return point;
+}
