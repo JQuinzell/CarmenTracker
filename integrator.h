@@ -11,7 +11,7 @@ private:
     Point3D point;
     float timestep;
 public:
-    Integrator(Point3D p=Point3D(1,1,1), double t=0.0001): point(p), timestep(t) {}
+    Integrator(float t=0.0001, Point3D p=Point3D()): point(p), timestep(t) {}
     
     Point3D get_point() {return point;}
     float get_timestep() {return timestep;}
