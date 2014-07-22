@@ -38,6 +38,7 @@ int main()
     {
         for(int j = 0; j < num_villains; j++)
         {
+            integrators[j].set_timestep(key);
             fout << integrators[j].step() << " ";
         }
         fout << "\n";
