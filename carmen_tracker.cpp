@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <ctime>
 #include "point3d.h"
 #include "integrator.h"
 using namespace std;
@@ -12,11 +13,13 @@ const int MAX_INTEGRATIONS = 10;
 
 int main()
 {
+    srand(time(NULL));
+    
     int iterations, num_villains;
     double key;
     string file_name, output_name;
     Integrator integrators[MAX_INTEGRATIONS];
-    
+
     cout << "Welcome. Please provide the file name: ";
     cin >> file_name;
     ifstream fin(file_name.c_str());
