@@ -1,4 +1,8 @@
 //Jared Rainwater --- integrator.cpp
+//Description
+/*
+    Definitions for integrator class functions
+*/
 #include "integrator.h"
 
 const int SIGMA = 10;

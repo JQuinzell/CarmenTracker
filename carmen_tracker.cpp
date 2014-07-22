@@ -1,5 +1,9 @@
 //Jared Rainwater --- carmen_tracker.cpp
 //Description
+/*
+    Gets tracking information from a file input by user
+    Tracks a max of 10 villains, outputting data to file specified by the info provided
+*/
 
 #include <iostream>
 #include <fstream>

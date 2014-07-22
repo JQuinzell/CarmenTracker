@@ -1,3 +1,10 @@
+//Jared Rainwater --- point3d.cpp
+/*
+    Description
+    Definitions of functions for point3d class
+*/
+
+
 #include "point3d.h"
 
 Point3D::Point3D()

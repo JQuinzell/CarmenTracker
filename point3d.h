@@ -1,5 +1,8 @@
 //Jared Rainwater --- point3d.h
-//
+/*
+    Description
+    Prototypes and implementation for Point3D class
+*/
 
 #ifndef POINT3D_H
 #define POINT3D_H
@@ -16,22 +19,26 @@ private:
     double x, y, z;
     
 public:
-    //Constructors
-    //default sets everything to 0
-    //Parameters are passed in the order x,y,z.
+    //Default Constructor
+    //Post: Constructs and returns a Point3D with random values (0-1) for members x,y,z
     Point3D();
     
+    //Getters
+    //Post: Returns members x, y, or z
     double get_x() const { return x; }
     double get_y() const { return y; }
     double get_z() const { return z; }
     
+    //Setters
+    //Post: Change values of members z,y or z
     void set_x(double val) { x = val; return; }
     void set_y(double val) { y = val; return; }
     void set_z(double val) { z = val; return; }
     
     //Desc: Use class with <<
     //Pre: None
-    //Post: Sends x,y,x to stream and returns the stream
+    //Post: Sends x,y,z to stream and returns the stream
+    //      Format: "x y z"
     friend ostream& operator <<(ostream& out, const Point3D& point);
     
     //Desc: Add each coord in a point together
@@ -41,7 +48,7 @@ public:
     
     //Desc: Add point in place
     //Pre: None
-    //Post: Adds rhs x,y,z to the current point
+    //Post: Adds rhs x,y,z to the current point x,y,z
     Point3D& operator +=(const Point3D& rhs);
     
     //Desc: Subtract x,y,z of two points

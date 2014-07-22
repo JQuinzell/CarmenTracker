@@ -1,3 +1,10 @@
+//Jared Rainwater --- point3d.hpp
+/*
+    Description
+    Implementation for templated functions..
+    Since they require a pesky .hpp..
+*/
+
 #include "point3d.h"
 
 template <typename T>
