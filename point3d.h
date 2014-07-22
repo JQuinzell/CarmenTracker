@@ -4,6 +4,8 @@
 #ifndef POINT3D_H
 #define POINT3D_H
 #include <iostream>
+#include <cstdlib>
+
 using namespace std;
 
 typedef const double cdbl;
@@ -17,7 +19,7 @@ public:
     //Constructors
     //default sets everything to 0
     //Parameters are passed in the order x,y,z.
-    Point3D(cdbl x_val=0, cdbl y_val=0, cdbl z_val=0);
+    Point3D();
     
     double get_x() const { return x; }
     double get_y() const { return y; }

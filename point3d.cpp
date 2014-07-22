@@ -1,7 +1,14 @@
 #include "point3d.h"
 
-Point3D::Point3D(cdbl x_val, cdbl y_val, cdbl z_val): x(x_val), y(y_val), z(z_val)
+Point3D::Point3D()
 {
+    double rand_x = rand()%101/100.0;
+    double rand_y = rand()%101/100.0;
+    double rand_z = rand()%101/100.0;
+    
+    x = rand_x;
+    y = rand_y;
+    z = rand_z;
 }
 
 ostream& operator <<(ostream& out, const Point3D& point)
