@@ -48,6 +48,8 @@ int main()
         fout << "\n";
     }
     fout.close();
+    cout << "The data has been stored in " << output_name << "." << endl;
+    cout << "Gooooooooooooooooooooooooooooooooooooooooooooodbye" << endl;
     return 0;
     
 }
